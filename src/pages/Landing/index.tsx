@@ -9,9 +9,22 @@ interface Props { }
 const LandingPage: FC<Props> = ({ }) => {
 
   return (
-    <Box sx={{ width: "100%", height: "100%" }}>
+    <Box
+      sx={{
+        width: "100%",
+        height: "100%",
+        position: "relative",
+      }}>
       <MachineModel />
-      <Buttons />
+      <Box sx={{
+        position: "absolute",
+        top: "50%",
+        left: "80%",
+        transform: "translate(-50%, -50%)",
+        zIndex: 1
+      }}>
+        <Buttons />
+      </Box>
     </Box>
   )
 }

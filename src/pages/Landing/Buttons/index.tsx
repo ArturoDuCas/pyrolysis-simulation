@@ -10,20 +10,24 @@ const Buttons: FC<Props> = ({ }) => {
   return (
     <Box sx={{
       display: "flex",
+      flexDirection: "column",
       justifyContent: "center",
       gap: "1rem",
     }}>
       <Button
-        variant="outlined"
-        onClick={() => navigate("/details")}
-      >
-        Descubre más
-      </Button>
-      <Button
+        size="large"
         variant="contained"
         onClick={() => navigate("/simulation")}
       >
         Simulación
+      </Button>
+      <Button
+        size="large"
+        variant="contained"
+        color="secondary"
+        onClick={() => navigate("/details")}
+      >
+        Descubre más
       </Button>
     </Box>
   )
