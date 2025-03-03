@@ -1,23 +1,37 @@
 import { Box, Slider, Typography } from "@mui/material";
 import { Mark } from "@mui/material/Slider/useSlider.types";
-import { FC } from "react";
+import { Dispatch, FC, SetStateAction } from "react";
 
 interface Props {
   label: string;
-  marks: Mark[];
+  setValue: Dispatch<SetStateAction<number>>;
+  value: number;
+  marks?: Mark[];
+  max?: number;
+  min?: number;
 }
 
-const CustomSlider: FC<Props> = ({ label, marks }) => {
+const CustomSlider: FC<Props> = ({
+  label,
+  marks,
+  max,
+  min,
+  setValue, 
+  value, 
+}) => {
   return (
     <Box>
       <Typography gutterBottom>
         {label}
       </Typography>
       <Slider
-        defaultValue={20}
-        step={10}
-        valueLabelDisplay="auto"
         marks={marks}
+        max={max}
+        min={min}
+        onChange={(_, value) => setValue(value as number)}
+        step={10}
+        value={value}
+        valueLabelDisplay="auto"
       />
     </Box>
   )
