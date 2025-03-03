@@ -5,7 +5,7 @@ import { FC, Suspense } from "react";
 interface Props { }
 
 const MachineModel: FC<Props> = ({ }) => {
-  const pyrolyisisModel = useFBX('./machine/model.fbx');
+  const pyrolyisisModel = useFBX('/machine/model.fbx');
 
   return (
     <Canvas frameloop="demand" camera={{ position: [0, 350, 6], fov: 90, near: 0.5, far: 1000 }}>
