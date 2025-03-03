@@ -1,5 +1,3 @@
-import { GraphData } from "./types";
-
 export function valueFormatter(value: number | null) {
   return `${value}mm`;
 }
