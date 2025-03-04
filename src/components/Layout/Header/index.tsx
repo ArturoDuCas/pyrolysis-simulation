@@ -10,6 +10,7 @@ const Header: FC<Props> = ({ }) => {
 
   return (
     <Box sx={{
+      boxSizing: "border-box",
       width: "100%",
       height: "60px",
       display: "flex",
