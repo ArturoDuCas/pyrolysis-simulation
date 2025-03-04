@@ -16,6 +16,7 @@ const Header: FC<Props> = ({ }) => {
       alignItems: "center",
       padding: "0 2rem",
       borderBottom: "1px solid #ccc",
+      backgroundColor: "#fff",
     }}>
       <Button
         startIcon={<Recycling />}

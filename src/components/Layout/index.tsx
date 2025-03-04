@@ -16,6 +16,7 @@ const Layout: FC<Props> = ({ children }) => {
         height: "100vh",
         display: "flex",
         flexDirection: "column",
+        backgroundColor: "#f5f5f5",
       }}>
         <Header />
         {children}
