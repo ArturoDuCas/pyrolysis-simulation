@@ -1,6 +1,7 @@
 import { FC, ReactNode } from "react";
 import { Box, ThemeProvider } from "@mui/material";
 import { theme } from "./theme";
+import Header from "./Header";
 
 interface Props {
   children: ReactNode;
@@ -16,6 +17,7 @@ const Layout: FC<Props> = ({ children }) => {
         display: "flex",
         flexDirection: "column",
       }}>
+        <Header />
         {children}
       </Box>
     </ThemeProvider>
