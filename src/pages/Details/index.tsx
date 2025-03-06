@@ -1,4 +1,4 @@
-import { Box, Grid2 as Grid, Skeleton, Typography } from "@mui/material";
+import { Box, Grid2 as Grid, Typography } from "@mui/material";
 import { FC } from "react";
 
 interface Props { }
@@ -25,9 +25,9 @@ const DetailsPage: FC<Props> = ({ }) => {
           <Typography variant="h4">
             Diagrama del Proceso
           </Typography>
-          <Skeleton
-            variant="rectangular"
-            height="75%"
+          <img
+            src="/images/diagram.jpg"
+            alt="Diagrama"
           />
         </Box>
       </Grid>
@@ -39,17 +39,20 @@ const DetailsPage: FC<Props> = ({ }) => {
           gap: "1rem",
           height: "100%",
         }}>
-          <Skeleton
-            variant="rectangular"
-            height="40%"
+          <img
+            src="/images/table.jpg"
+            alt="Cover"
+            style={{ height: "300px", maxHeight: "40%" }}
           />
-          <Skeleton
-            variant="rectangular"
-            height="15%"
+          <img
+            src="/images/f1.jpg"
+            alt="Formula 1"
+            style={{ height: "15%", maxHeight: "15%" }}
           />
-          <Skeleton
-            variant="rectangular"
-            height="15%"
+          <img
+            src="/images/f2.jpg"
+            alt="Formula 2"
+            style={{ height: "15%", maxHeight: "15%" }}
           />
         </Box>
       </Grid>

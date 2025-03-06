@@ -1,14 +1,29 @@
-import { FC, useState } from "react";
+import { Dispatch, FC, SetStateAction } from "react";
 import { Box } from "@mui/material";
 import CustomSlider from "../../../components/CustomSlider";
-import { maxTemperature, minTemperature, tempertureMarks } from "./utils";
+import { tempertureMarks, timeMarks } from "./utils";
+import { maxTemperature, maxTime, minTemperature, minTime } from "../utils";
 
-interface Props { }
+interface Props {
+  temperatureInCelsius: number;
+  setTemperatureInCelsius: Dispatch<SetStateAction<number>>;
+  timeInMinutes: number;
+  setTimeInMinutes: Dispatch<SetStateAction<number>>;
+  weight: number;
+  setWeight: Dispatch<SetStateAction<number>>;
+  updateData: () => void;
+}
 
-const Controls: FC<Props> = ({ }) => {
-  const [temperatureInCelsius, setTemperatureInCelsius] = useState<number>(minTemperature);
-  const [weight, setWeight] = useState<number>(10);
-  const [time, setTime] = useState<number>(10);
+const Controls: FC<Props> = ({ 
+  temperatureInCelsius, 
+  setTemperatureInCelsius, 
+  timeInMinutes, 
+  setTimeInMinutes, 
+  weight, 
+  setWeight,
+  updateData,
+}) => {
+
 
   return (
     <Box sx={{
@@ -24,16 +39,22 @@ const Controls: FC<Props> = ({ }) => {
         min={minTemperature}
         setValue={setTemperatureInCelsius}
         value={temperatureInCelsius}
+        updateData={updateData}
       />
       <CustomSlider
         label="Peso Ingresado"
         setValue={setWeight}
         value={weight}
+        updateData={updateData}
       />
       <CustomSlider
-        label="Tiempo"
-        setValue={setTime}
-        value={time}
+        label="Tiempo (min)"
+        marks={timeMarks}
+        setValue={setTimeInMinutes}
+        value={timeInMinutes}
+        min={minTime}
+        max={maxTime}
+        updateData={updateData}
       />
     </Box>
   )

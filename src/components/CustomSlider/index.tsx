@@ -9,6 +9,7 @@ interface Props {
   marks?: Mark[];
   max?: number;
   min?: number;
+  updateData: () => void;
 }
 
 const CustomSlider: FC<Props> = ({
@@ -18,6 +19,7 @@ const CustomSlider: FC<Props> = ({
   min,
   setValue, 
   value, 
+  updateData,
 }) => {
   return (
     <Box>
@@ -32,6 +34,7 @@ const CustomSlider: FC<Props> = ({
         step={10}
         value={value}
         valueLabelDisplay="auto"
+        onChangeCommitted={updateData}
       />
     </Box>
   )

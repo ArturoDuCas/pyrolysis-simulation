@@ -1,18 +1,23 @@
 import { FC } from "react";
 import { BarChart } from '@mui/x-charts/BarChart';
-import { dataset, valueFormatter } from "./utils";
+import { valueFormatter } from "./utils";
+import { DatasetType } from "@mui/x-charts/internals";
 
-interface Props { }
+interface Props {
+  dataset: DatasetType;
+}
 
-const Graph: FC<Props> = ({ }) => {
+const Graph: FC<Props> = ({
+  dataset
+}) => {
 
   return (
     <BarChart
       dataset={dataset}
       series={[
-        { dataKey: 'biochar', label: 'Biochar', valueFormatter },
-        { dataKey: 'bioAceite', label: 'Bio-aceite', valueFormatter },
-        { dataKey: 'gas', label: 'Gas de síntesis', valueFormatter },
+        { dataKey: 'biochar', label: 'Biochar', valueFormatter, color: '#988b92' },
+        { dataKey: 'bioAceite', label: 'Bio-aceite', valueFormatter, color: "#3a4b64" },
+        { dataKey: 'gas', label: 'Gas', valueFormatter, color: '#6d331f' },
       ]}
       height={290}
       xAxis={[{ dataKey: "plasticType", scaleType: 'band' }]}

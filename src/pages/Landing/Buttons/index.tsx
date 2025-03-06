@@ -18,6 +18,9 @@ const Buttons: FC<Props> = ({ }) => {
         size="large"
         variant="contained"
         onClick={() => navigate("/simulation")}
+        sx={{
+          fontSize: "1.5rem",
+        }}
       >
         Simulación
       </Button>
@@ -26,6 +29,9 @@ const Buttons: FC<Props> = ({ }) => {
         variant="contained"
         color="secondary"
         onClick={() => navigate("/details")}
+        sx={{
+          fontSize: "1.5rem",
+        }}
       >
         Descubre más
       </Button>

@@ -1,6 +1,4 @@
-export const minTemperature = 400;
-export const maxTemperature = 750;
-
+import { maxTemperature, maxTime, minTemperature, minTime } from "../utils";
 
 export const tempertureMarks = [
   {
@@ -10,5 +8,16 @@ export const tempertureMarks = [
   {
     value: maxTemperature,
     label: `${maxTemperature}°C`,
+  }
+];
+
+export const timeMarks = [
+  {
+    value: minTime,
+    label: `${minTime}min`,
+  },
+  {
+    value: maxTime,
+    label: `${maxTime}min`,
   }
 ];
