@@ -20,6 +20,7 @@ const Buttons: FC<Props> = ({ }) => {
         onClick={() => navigate("/simulation")}
         sx={{
           fontSize: "1.5rem",
+          minWidth: "248px",
         }}
       >
         Simulación
@@ -31,6 +32,7 @@ const Buttons: FC<Props> = ({ }) => {
         onClick={() => navigate("/details")}
         sx={{
           fontSize: "1.5rem",
+          minWidth: "248px",
         }}
       >
         Descubre más

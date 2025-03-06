@@ -18,8 +18,8 @@ const LandingPage: FC<Props> = ({ }) => {
       <MachineModel />
       <Box sx={{
         position: "absolute",
-        top: "50%",
-        left: "80%",
+        top: { xs: "75%", md: "50%" },
+        left: { xs: "50%", md: "80%" },
         transform: "translate(-50%, -50%)",
         zIndex: 1
       }}>
