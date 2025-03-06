@@ -14,7 +14,7 @@ const DetailsPage: FC<Props> = ({ }) => {
         padding: "1rem",
       }}
     >
-      <Grid size={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <Box sx={{
           display: "flex",
           flexDirection: "column",
@@ -28,10 +28,11 @@ const DetailsPage: FC<Props> = ({ }) => {
           <img
             src="/images/diagram.jpg"
             alt="Diagrama"
+            style={{ objectFit: "contain" }}
           />
         </Box>
       </Grid>
-      <Grid size={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <Box sx={{
           display: "flex",
           flexDirection: "column",
@@ -42,17 +43,17 @@ const DetailsPage: FC<Props> = ({ }) => {
           <img
             src="/images/table.jpg"
             alt="Cover"
-            style={{ height: "300px", maxHeight: "40%" }}
+            style={{ height: "300px", maxHeight: "40%", objectFit: "contain" }}
           />
           <img
             src="/images/f1.jpg"
             alt="Formula 1"
-            style={{ height: "15%", maxHeight: "15%" }}
+            style={{ height: "15%", maxHeight: "15%", objectFit: "contain" }}
           />
           <img
             src="/images/f2.jpg"
             alt="Formula 2"
-            style={{ height: "15%", maxHeight: "15%" }}
+            style={{ height: "15%", maxHeight: "15%", objectFit: "contain" }}
           />
         </Box>
       </Grid>
